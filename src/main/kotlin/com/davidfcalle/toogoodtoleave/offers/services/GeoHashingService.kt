@@ -5,6 +5,7 @@ import com.uber.h3core.H3Core
 import org.springframework.stereotype.Service
 
 private const val RING_RESOLUTION = 9
+private const val NEIGHBORS_DISTANCE = 3
 
 @Service
 class GeoHashingService {
@@ -17,6 +18,6 @@ class GeoHashingService {
 
     fun nearbyHexagons(location: Location): List<String> {
         val hexagonId = toHexagonId(location)
-        return  h3.gridDisk(hexagonId, RING_RESOLUTION).toList()
+        return  h3.gridDisk(hexagonId, NEIGHBORS_DISTANCE).toList()
     }
 }

@@ -33,6 +33,8 @@ private fun Offer.toEntity(): OfferEntity {
             locationLat=locationLat,
             locationLng= locationLng,
             hexagonId = hexagonId,
+            pickupTimeFrom = pickupTimeFrom,
+            pickupTimeTo = pickupTimeTo,
     )
 }
 
@@ -49,5 +51,7 @@ private fun OfferEntity.toModel(): Offer {
             locationLat=locationLat,
             locationLng= locationLng,
             hexagonId = hexagonId,
+            pickupTimeFrom = pickupTimeFrom,
+            pickupTimeTo = pickupTimeTo,
     )
 }

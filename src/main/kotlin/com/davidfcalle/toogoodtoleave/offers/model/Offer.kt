@@ -11,6 +11,10 @@ data class Offer(
 
         val validFrom: ZonedDateTime,
         val validTo: ZonedDateTime,
+
+        val pickupTimeFrom: ZonedDateTime,
+        val pickupTimeTo: ZonedDateTime,
+
         val quantity: Int,
 
         val locationLat: Double,

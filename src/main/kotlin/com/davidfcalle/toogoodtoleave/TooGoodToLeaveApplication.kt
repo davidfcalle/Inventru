@@ -34,6 +34,8 @@ class DummyDataGenerator(
 				locationLat = 41.4065802,
 				locationLng = 2.1646064,
 				quantity = 3,
+				pickupTimeFrom = ZonedDateTime.now().plusHours(1),
+				pickupTimeTo = ZonedDateTime.now().plusHours(2),
 			),
 			Offer(
 				title = "Paquete Sorpresa Frituras",
@@ -47,6 +49,8 @@ class DummyDataGenerator(
 				locationLat = 4.6937335,
 				locationLng = -74.0786183,
 				quantity = 3,
+				pickupTimeFrom = ZonedDateTime.now().plusHours(1),
+				pickupTimeTo = ZonedDateTime.now().plusMinutes(45),
 			),
 			Offer(
 				title = "Paquete sorpresa de cosas para rezar",
@@ -60,6 +64,8 @@ class DummyDataGenerator(
 				locationLat = 4.6937335,
 				locationLng = -74.0786183,
 				quantity = 3,
+				pickupTimeFrom = ZonedDateTime.now().plusHours(1),
+				pickupTimeTo = ZonedDateTime.now().plusHours(2),
 			),
 			Offer(
 				title = "Paquete Sorpresa de panes",
@@ -73,6 +79,8 @@ class DummyDataGenerator(
 				locationLat = 4.6937335,
 				locationLng = -74.0786183,
 				quantity = 3,
+				pickupTimeFrom = ZonedDateTime.now().plusHours(1),
+				pickupTimeTo = ZonedDateTime.now().plusHours(2),
 			),
 			Offer(
 				title = "Paquete Tostao",
@@ -86,6 +94,8 @@ class DummyDataGenerator(
 				locationLat = 4.6937335,
 				locationLng = -74.0786183,
 				quantity = 3,
+				pickupTimeFrom = ZonedDateTime.now().plusHours(1),
+				pickupTimeTo = ZonedDateTime.now().plusHours(2),
 			),
 			Offer(
 				title = "Paquete Sorpresa de snacks de cine colombia",
@@ -99,6 +109,8 @@ class DummyDataGenerator(
 				locationLat = 4.6955805,
 				locationLng = -74.0863024,
 				quantity = 3,
+				pickupTimeFrom = ZonedDateTime.now().plusHours(1),
+				pickupTimeTo = ZonedDateTime.now().plusHours(2),
 			),
 		)
 		offers.forEach { repository.save(it) }
